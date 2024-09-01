@@ -1,0 +1,331 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>UACJ MARKET</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts (Lato) -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/deecb3ce02.js" crossorigin="anonymous"></script>
+
+    <!-- Mis estilos CSS -->
+    <link rel="stylesheet" href="{% static 'sitio/style.css' %}">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #f5e4d7; /* Color café pastel claro */
+            color: #4b3621; /* Color café oscuro */
+            font-family: Arial, sans-serif; /* Fuente sugerida */
+            line-height: 1.6; /* Espaciado entre líneas */
+        }
+
+        h1 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: 48px;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 1px;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .header {
+            background-color:black;
+            position: relative;
+            text-align: center;
+            background: #c57d56;
+            color: rgb(255, 0, 0);
+        }
+
+        .logo {
+            width: 6000px;
+            fill: white;
+            padding-right: 15px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .inner-header {
+            height: 5vh; /* Ajusta la altura a tu preferencia */
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .waves {
+            position: relative;
+            width: 100%;
+            height: 15vh;
+            margin-bottom: -7px;
+            min-height: 100px;
+            max-height: 150px;
+        }
+
+        .content {
+            position: relative;
+            height: 20vh;
+            text-align: center;
+            background-color: white;
+        }
+
+        .parallax > use {
+            animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+        }
+
+        .parallax > use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+
+        .parallax > use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+
+        .parallax > use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+
+        .parallax > use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(85px, 0, 0);
+            }
+        }
+
+        /* Shrinking for mobile */
+        @media (max-width: 768px) {
+            .waves {
+                height: 40px;
+                min-height: 40px;
+            }
+
+            .content {
+                height: 30vh;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+            .icon-person {
+                font-size: 48px; /* Ajusta el tamaño según tus necesidades */
+                color: blue;    /* Cambia el color según tus necesidades */
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="inner-header flex">
+            <!-- Logo -->
+           
+            <a class="m-0 p-0 text-dark nav-logo" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" overflow="inherit" version="1.2" id="hammer">
+                    <path d="M12.551 49.485c-.34.596-1.308.69-2.162.2l-5.346-3.043c-.85-.485-1.265-1.362-.924-1.957L26.856 8.642c3.27-5.286-8.16-4.82-10.966-3.264C18.012 1.573 24.775.317 29.161 0l1.276.083c2.479 1.235 6.034 3.088 8.377 4.642 1.721 2.703 3.536 4.126 6.106 4.119 3.354 2.57-1.885 9.581-5.181 6.334.018-1.604-4.636-5.754-7.896-2.335L12.551 49.485z"/>
+                  </svg>
+
+            </a>
+            
+        </div>
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+        
+        
+        
+        <!-- Waves end -->
+    </div>
+    
+    <!-- Header ends -->
+
+   
+     <!-- NAV -->
+     
+     <nav class="navbar navbar-expand-md navbar-light border">
+        <div class="container py-2 ">
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Inicio</a>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Categorias</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            {% for categoria in categorias %}
+                                <a class="dropdown-item" href="{% url 'SITIO:productos_por_categoria' categoria.id %}">{{ categoria.descripcion.capitalize }}</a>
+                            {% endfor %}
+                        </div>
+                    </li>
+                    <!-- PARA ADMINS/MODERADORES -->
+                    {% if user.is_superuser %}
+                        <li class="nav-item">
+                            <a class "nav-link" href="{% url 'SITIO:producto_create' %}">Agregar producto</a>
+                        </li>
+                    {% endif %}
+                </ul>
+                <form action="{% url 'SITIO:producto_search' %}" method="GET" class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" name="texto" type="text" placeholder="Buscar producto...">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscador</button>
+                </form>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+
+
+
+            {% if user.is_authenticated %}
+            {% if user.is_staff %}
+                <!-- Contenido específico para el personal -->
+                <div class="ml-auto d-flex">
+                    <a role="button" class="btn btn-primary mr-3" href="{% url 'SITIO:perfilempleado' %}">
+                        <i class="fas fa-user icon-person"></i> Perfil de Empleado
+                    </a>
+                </div>
+            {% elif user.is_superuser %}
+                <!-- Contenido específico para el administrador -->
+                <div class="ml-auto d-flex">
+                    <a role="button" class="btn btn-primary mr-3" href="{% url 'SITIO:perfiladmin' %}">
+                        <i class="fas fa-user icon-person"></i> Perfil de Administrador
+                    </a>
+                </div>
+            {% else %}
+                <!-- Contenido por defecto para el usuario normal -->
+                <div class="ml-auto d-flex">
+                    <a role="button" class="btn btn-primary mr-3" href="{% url 'SITIO:perfil' %}">
+                        <i class="fas fa-user icon-person"></i> Mi Perfil
+                    </a>
+                </div>
+            {% endif %}
+        {% endif %}
+        
+           
+            
+            
+            
+
+                {% if user.is_staff %}
+                <a role="button" class="btn btn-primary mr-3" href="{% url 'SITIO:Solicitar'%}">
+                    Solicitar préstamo
+                </a>
+               
+                {% endif %}
+                {% if user.is_superuser %}
+                <a role="button" class="btn btn-primary mr-3" href="{% url 'SITIO:nomina'%}">
+                   Nómina
+                </a>
+                <a role="button" class="btn btn-primary mr-3" href="{% url 'SITIO:Aceptar'%}">
+                    Préstamos solicitados
+                 </a>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <!-- Estás conectado como: {{ user.get_username }} -->
+                <form method="POST" action="{% url 'logout' %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-secondary mr-3" title="Salir">
+                        <i class="fas fa-sign-out-alt"></i> Salir
+                    </button>
+                </form>
+            {% else %}
+                <a role="button" class="btn btn-primary mr-3" href="{% url 'login'%}?next={{request.path}}">
+                    Ingresar
+                </a>
+                <a role="button" class="btn btn-secondary mr-3" href="{% url 'SITIO:register' %}">
+                    Registrarse
+                </a>
+            {% endif %}
+                {% if user.is_superuser or not user.is_authenticated %}
+                    <button role="button" class="btn btn-success mr-3" disabled>
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                {% else %}
+                    <a role="button" class="btn btn-success mr-3" href="{% url 'SITIO:carrito_index' %}">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="container my-3">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-light p-3 border-top">
+        <div class="container">
+            <p class="p-0 m-0 mb-2 logo-empresa-footer">UACJ MARKET &reg;</p>
+            <p class="p-0 m-0 mx-5 text-secondary">Fintech</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
+
